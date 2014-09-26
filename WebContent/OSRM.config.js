@@ -20,8 +20,8 @@ or see http://www.gnu.org/licenses/agpl.txt.
 
 OSRM.DEFAULTS = {
 		ROUTING_ENGINES: [
-			{	url: 'http://router.project-osrm.org/viaroute',
-				timestamp: 'http://router.project-osrm.org/timestamp',
+			{	url: 'http://88.198.62.8:5000/viaroute',
+				timestamp: 'http://88.198.62.8:5000/timestamp',
 				metric: 0,
 				label: 'ENGINE_0',
 			}
@@ -31,8 +31,9 @@ OSRM.DEFAULTS = {
 	WEBSITE_URL: document.URL.replace(/#*(\?.*|$)/i,""),					// truncates URL before first ?, and removes tailing #
 	HOST_GEOCODER_URL: 'http://nominatim.openstreetmap.org/search',
 	HOST_REVERSE_GEOCODER_URL: 'http://nominatim.openstreetmap.org/reverse',
-	HOST_SHORTENER_URL: 'http://map.project-osrm.org/shorten/',				// use '' to not use url shortener service
-	
+	//HOST_SHORTENER_URL: 'http://map.project-osrm.org/shorten/',				// use '' to not use url shortener service
+	HOST_SHORTENER_URL: '',
+
 	SHORTENER_PARAMETERS: '%url&jsonp=%jsonp',
 	SHORTENER_REPLY_PARAMETER: 'ShortURL',									// keep set, even if not using url shortener service!
 	
@@ -46,44 +47,49 @@ OSRM.DEFAULTS = {
 	JOSM_MIN_ZOOM_LEVEL: 16,	
 	NOTES_MIN_ZOOM_LEVEL: 8,
 	
-	ONLOAD_ZOOM_LEVEL: 5,
-	ONLOAD_LATITUDE: 48.84,
-	ONLOAD_LONGITUDE: 10.10,
+	ONLOAD_ZOOM_LEVEL: 15,
+	ONLOAD_LATITUDE: 47.0268,
+	ONLOAD_LONGITUDE: 28.8362,
 	ONLOAD_SOURCE: "",
 	ONLOAD_TARGET: "",
 	
-	LANGUAGE: "en",
+	LANGUAGE: "ro",
 	LANGUAGE_USE_BROWSER_SETTING: true,
 	LANUGAGE_ONDEMAND_RELOADING: true,
 	LANGUAGE_SUPPORTED: [ 
 		{encoding:"en", name:"English"},
-		{encoding:"bg", name:"Български"},
-		{encoding:"ca", name:"Català"},
-		{encoding:"cs", name:"Česky"},
+		//{encoding:"bg", name:"Български"},
+		//{encoding:"ca", name:"Català"},
+		//{encoding:"cs", name:"Česky"},
 		{encoding:"de", name:"Deutsch"},
-		{encoding:"da", name:"Dansk"},
-		{encoding:"el", name:"Ελληνικά"},
+		//{encoding:"da", name:"Dansk"},
+		//{encoding:"el", name:"Ελληνικά"},
 		{encoding:"eo", name:"Esperanto"},
-		{encoding:"es", name:"Español"},
-		{encoding:"fi", name:"Suomi"},
+		//{encoding:"es", name:"Español"},
+		//{encoding:"fi", name:"Suomi"},
 		{encoding:"fr", name:"Français"},
 		{encoding:"it", name:"Italiano"},
-		{encoding:"ja", name:"日本人"},
-		{encoding:"ka", name:"ქართული"},
-		{encoding:"lv", name:"Latviešu"},
-		{encoding:"nb", name:"Bokmål"},
-		{encoding:"pl", name:"Polski"},
-		{encoding:"pt", name:"Portugues"},
+		//{encoding:"ja", name:"日本人"},
+		//{encoding:"ka", name:"ქართული"},
+		//{encoding:"lv", name:"Latviešu"},
+		//{encoding:"nb", name:"Bokmål"},
+		//{encoding:"pl", name:"Polski"},
+		//{encoding:"pt", name:"Portugues"},
 		{encoding:"ro", name:"Română"},
 		{encoding:"ru", name:"Русский"},
-		{encoding:"sk", name:"Slovensky"},
-		{encoding:"sv", name:"Svenska"},
-		{encoding:"ta", name:"தமிழ்"},
-		{encoding:"tr", name:"Türkçe"},
+		//{encoding:"sk", name:"Slovensky"},
+		//{encoding:"sv", name:"Svenska"},
+		//{encoding:"ta", name:"தமிழ்"},
+		//{encoding:"tr", name:"Türkçe"},
 		{encoding:"uk", name:"Українська"}
 	],
 		
 	TILE_SERVERS: [
+		{	display_name: 'HartaMD Beta',
+			url:'http://ots1.hartamd.com/tiles.php?z={z}&x={x}&y={y}',
+			attribution:'Data ©<a href="http://hartamd.com/">HartaMD.com</a>',
+			options:{maxZoom: 17, tms: true}
+		},
 		{	display_name: 'Mapbox Terrain',
 			url:'http://{s}.tiles.mapbox.com/v3/dennisl.map-dfbkqsr2/{z}/{x}/{y}.png',
 			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL), Imagery © <a href="http://mapbox.com/">MapBox</a>',
@@ -111,6 +117,11 @@ OSRM.DEFAULTS = {
 			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL), Imagery © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (CC-BY-SA)',
 			options:{maxZoom: 18}
 		},
+		{	display_name: 'point.md',
+			url:'http://img.simpalsmedia.com/point.md/map/1/{z}/{x}/{y}.png',
+			attribution:'Maps &copy; <a href="http://www.point.md">Simpals</a>, Data &copy; <a href="http://www.ingeocad.md">Ingeocad</a>',
+			options:{minZoom:8, maxZoom: 18}
+		},
 		{	display_name: 'MapQuest',
 			url:'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 			attribution:'Data © <a href="http://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors (ODbL), Imagery © <a href="http://www.mapquest.de/">MapQuest</a>',
@@ -119,11 +130,11 @@ OSRM.DEFAULTS = {
 	],
 	
 	OVERLAY_SERVERS: [
-  		{	display_name: 'Small Components',
-			url:'http://tools.geofabrik.de/osmi/tiles/routing_i/{z}/{x}/{y}.png',
-			attribution:'',
-			options:{}
-		}
+  		//{	display_name: 'Small Components',
+		//	url:'http://tools.geofabrik.de/osmi/tiles/routing_i/{z}/{x}/{y}.png',
+		//	attribution:'',
+		//	options:{}
+		//}
 	],
 
 	NOTIFICATIONS: {
