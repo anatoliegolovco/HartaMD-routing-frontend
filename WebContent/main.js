@@ -117,7 +117,7 @@ OSRM.prefetchImages = function() {
 		              	{id:'direction_10',						url:'images/head.png'},
 		        		{id:'direction_11',						url:'images/round-about.png'},
 		        		{id:'direction_15',						url:'images/target.png'},
-		        		{id:'osrm-logo',						url:'images/osrm-logo.png'},
+		        		{id:'hartamd-logo',						url:'images/hartamd-logo.png'},
 		        		{id:'selector',							url:'images/selector.png'}
 	               ];
 		
@@ -202,7 +202,7 @@ OSRM.prefetchCSSIcons = function() {
 	                	{ id:'.down-marker:hover',				image_id:'down_hover'},
 	                	{ id:'.down-marker:active',				image_id:'down_active'},
 	                	
-	                	{ id:'#input-mask-header',				image_id:'osrm-logo'},
+	                	{ id:'#input-mask-header',				image_id:'hartamd-logo'},
 	                	{ id:'.styled-select',					image_id:'selector'},
 	                	
 	                	{ id:'#config-handle-icon',				image_id:'config'},
