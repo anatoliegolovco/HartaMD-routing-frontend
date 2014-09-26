@@ -149,7 +149,7 @@ OSRM.Localization["it"] = {
 									"<br/><br/>" +
 									"Puoi perfino creare marcatori intermedi trascinandoli al di fuori del percorso principale! ",
 // do not translate below this line
-"GUI_LEGAL_NOTICE": "Routing by <a href='http://project-osrm.org/'>Project OSRM</a> - Geocoder by <a href='http://wiki.openstreetmap.org/wiki/Nominatim'>Nominatim</a> - OSRM hosting by <a href='http://algo2.iti.kit.edu/'>KIT</a>",
+"GUI_LEGAL_NOTICE": "Routing by <a href='http://project-osrm.org/'>Project OSRM</a> - Geocoder by <a href='http://wiki.openstreetmap.org/wiki/Nominatim'>Nominatim</a>",
 "GUI_DATA_TIMESTAMP": "data: ",
 "GUI_VERSION": "gui: ",
 "QR": "QR"
