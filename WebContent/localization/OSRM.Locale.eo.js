@@ -155,7 +155,7 @@ OSRM.Localization["eo"] = {
 									"<br/><br/>" +
 									"Vi povas eĉ krei novajn markilojn se vi trenas ilin for de la vojo! ",
 // do not translate below this line
-"GUI_LEGAL_NOTICE": "Routing by <a href='http://project-osrm.org/'>Project OSRM</a> - Geocoder by <a href='http://wiki.openstreetmap.org/wiki/Nominatim'>Nominatim</a>",
+"GUI_LEGAL_NOTICE": "Routing engine <a href='http://project-osrm.org/'>OSRM</a> - Geocoder by <a href='http://wiki.openstreetmap.org/wiki/Nominatim'>Nominatim</a>",
 "GUI_DATA_TIMESTAMP": "data: ",
 "GUI_VERSION": "gui: ",
 "QR": "QR"
